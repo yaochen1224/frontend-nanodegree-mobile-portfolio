@@ -1,8 +1,25 @@
 ## Website Performance Optimization portfolio project
 
-Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
+# Mobile Portfolio Optimization
 
-To get started, check out the repository and inspect the code.
+
+
+
+### Part 1: Optimize PageSpeed Insights score for index.html
+Changes Include:
+  - Inline minified css/style.css
+  - add media="print" for print.css
+  ```sh
+$ <link href="css/print.css" rel="stylesheet" media="print">
+  ```
+  - move Javascript to the end of body
+  - Add "async" attribute to Javascript in the end
+  
+### Part 2: Part 2: Optimize Frames per Second in pizza.html
+Changes Include:
+  - Wrap document.querySelectorAll(".randomPizzaContainer") into a variable so that it doesn’t need to be called each time 
+  - Delete the whole determineDX function and calculated new size directly
+  - Count Math.sin(bodySroll) outside the loop
 
 ### Getting started
 
