@@ -497,7 +497,7 @@ function updatePositions() {
   var phases = new Array(5);
   for (var i = 0; i < 5; ++ i)
     phases[i] = Math.sin(bodySroll + i);
-  for (var i = 0; i < items.length; i++) {
+  for (i = 0; i < items.length; i++) {
     var phase = phases[i % 5];
     // var phase = Math.sin(bodySroll + (i % 5));
     items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
