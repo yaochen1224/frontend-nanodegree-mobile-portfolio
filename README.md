@@ -27,8 +27,8 @@ Changes Include:
   - Save the randomPizzas.length, which is part of the condition statement, in a local variable, so the array's length property is not accessed to check its value at each iteration
   - Declare the phase variable (var phase;) in the initialisation of the for loop so as to prevent it from being created every time the loop is executed.
   - Dynamically calculate the number of pizzas needed to fill the screen, based on browser window resolution. To do this, calculate the number of rows using the height property of the screen divided by s, and then multiply row * cols.
-  Declare the elem variable (var elem;) in the initialisation of the for-loop in order to prevent it from being created every time the loop is executed.
-  Change querySelector('#movingPizzas1') into getElementById('movingPizzas1') and then move this DOM call outside the for statement and save it into a local variable, which can be used here.
+  - Declare the elem variable (var elem;) in the initialisation of the for-loop in order to prevent it from being created every time the loop is executed.
+  - Change querySelector('#movingPizzas1') into getElementById('movingPizzas1') and then move this DOM call outside the for statement and save it into a local variable, which can be used here.
       ```sh
       /** Outside the loop */
       var movingPizzas = document.getElementById('movingPizzas1');
@@ -36,6 +36,7 @@ Changes Include:
       /** Inside the for statement / loop – this line*/
       movingPizzas.appendChild(elem);
       ```
+  - Include transform: translateZ(0) and backface-visibility: hidden property into '.mover' class
 
 
 ### Getting started
